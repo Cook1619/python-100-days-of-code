@@ -30,3 +30,53 @@
 #     print(f"Your BMI is {result}, you are obese.")
 # else:
 #     print(f"Your BMI is {result}, you are clinically obese.")
+
+# number = int(input("What year do you want to check if its a leap year? "))
+
+# if number % 4 == 0:
+#     if number % 100 == 0:
+#         if number % 400 == 0:
+#             print("LEAP")
+#         else:
+#             print("Its not a leap year")
+#     else:
+#         print("LEAP")
+# else:
+#     print("Not LEAP")
+
+#Pizza Ordering
+
+print('Welcome to python pizza!!')
+size = input("What size pizza would you like to order S, M, L?\n")
+pepperoni =  input("Would you like pepperoni, Y or N?\n")
+extraChesse = input("Would you like extra cheese, Y or N?\n")
+
+bill = 0
+
+if size == 'S':
+    bill += 15
+    if pepperoni == 'Y':
+        bill += 2
+    if extraChesse == "Y":
+        bill += 1
+        print(f"Your total is {bill}")
+    else:
+        print(f"Your total is {bill}") 
+elif size == 'M':
+    bill += 20
+    if pepperoni == 'Y':
+            bill += 3
+    if extraChesse == "Y":
+        bill += 1
+        print(f"Your total is {bill}")
+    else:
+        print(f"Your total is {bill}")  
+elif size == "L":
+    bill += 25
+    if pepperoni == 'Y':
+            bill += 3
+    if extraChesse == "Y":
+        bill += 1
+        print(f"Your total is {bill}")
+    else:
+        print(f"Your total is {bill}")  
