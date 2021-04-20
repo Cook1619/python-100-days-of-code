@@ -83,35 +83,77 @@
 
 #Love Calc
 
-name1 = input("What is your name?\n")
-name2 = input("What is there name?\n")
-combined_string = name1 + name2
+# name1 = input("What is your name?\n")
+# name2 = input("What is there name?\n")
+# combined_string = name1 + name2
 
-lower_case_string = combined_string.lower()
+# lower_case_string = combined_string.lower()
 
-num1 = 0
-num2 = 0
+# num1 = 0
+# num2 = 0
 
-t = lower_case_string.count('t')
-r = lower_case_string.count('r')
-u = lower_case_string.count('u')
-e = lower_case_string.count('e')
+# t = lower_case_string.count('t')
+# r = lower_case_string.count('r')
+# u = lower_case_string.count('u')
+# e = lower_case_string.count('e')
 
-trueScore = t + r + u + e
+# trueScore = t + r + u + e
 
-l = lower_case_string.count('l')
-o = lower_case_string.count('o')
-v = lower_case_string.count('v')
-e = lower_case_string.count('e')
+# l = lower_case_string.count('l')
+# o = lower_case_string.count('o')
+# v = lower_case_string.count('v')
+# e = lower_case_string.count('e')
 
-loveScore = l + o + v + e
+# loveScore = l + o + v + e
 
 
-loveNumber = f"{trueScore}{loveScore}"
+# loveNumber = f"{trueScore}{loveScore}"
 
-if int(loveNumber) < 10 or int(loveNumber) > 90:
-    print(f"Your score is {loveNumber}, you go together like coke and mentos")
-elif  int(loveNumber) >= 40 and int(loveNumber) <= 50:
-    print(f"Your score is {loveNumber}, you are alright together")
-else:
-    print(f"You score is {loveNumber}")
+# if int(loveNumber) < 10 or int(loveNumber) > 90:
+#     print(f"Your score is {loveNumber}, you go together like coke and mentos")
+# elif  int(loveNumber) >= 40 and int(loveNumber) <= 50:
+#     print(f"Your score is {loveNumber}, you are alright together")
+# else:
+#     print(f"You score is {loveNumber}")
+
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+answer1 = input("Which direction would you like to go right or left?\n")
+if answer1.lower() != 'left':
+    print("You fell in a hole game over!!")
+elif answer1.lower() == 'left':
+    answer2 = input("Would you like to swim or wait?\n")
+    if answer2.lower() != 'wait':
+        print('Attacked by a trout you die!')
+    elif answer2.lower() == 'wait':
+        answer3 = input("Which door would you like to go in red, yellow, blue?\n")
+        if answer3.lower() == 'red':
+            print("Burned by fire GAMEOVER")
+        elif answer3.lower() == 'yellow':
+            print("YOU WIN!!")
+        elif answer3.lower() == 'blue':
+            print("Eaten by beasts!!")
+        else:
+            print("WRONG ANSWERS GAMEOVER")
