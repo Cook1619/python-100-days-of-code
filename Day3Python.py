@@ -46,37 +46,72 @@
 
 #Pizza Ordering
 
-print('Welcome to python pizza!!')
-size = input("What size pizza would you like to order S, M, L?\n")
-pepperoni =  input("Would you like pepperoni, Y or N?\n")
-extraChesse = input("Would you like extra cheese, Y or N?\n")
+# print('Welcome to python pizza!!')
+# size = input("What size pizza would you like to order S, M, L?\n")
+# pepperoni =  input("Would you like pepperoni, Y or N?\n")
+# extraChesse = input("Would you like extra cheese, Y or N?\n")
 
-bill = 0
+# bill = 0
 
-if size == 'S':
-    bill += 15
-    if pepperoni == 'Y':
-        bill += 2
-    if extraChesse == "Y":
-        bill += 1
-        print(f"Your total is {bill}")
-    else:
-        print(f"Your total is {bill}") 
-elif size == 'M':
-    bill += 20
-    if pepperoni == 'Y':
-            bill += 3
-    if extraChesse == "Y":
-        bill += 1
-        print(f"Your total is {bill}")
-    else:
-        print(f"Your total is {bill}")  
-elif size == "L":
-    bill += 25
-    if pepperoni == 'Y':
-            bill += 3
-    if extraChesse == "Y":
-        bill += 1
-        print(f"Your total is {bill}")
-    else:
-        print(f"Your total is {bill}")  
+# if size == 'S':
+#     bill += 15
+#     if pepperoni == 'Y':
+#         bill += 2
+#     if extraChesse == "Y":
+#         bill += 1
+#         print(f"Your total is {bill}")
+#     else:
+#         print(f"Your total is {bill}") 
+# elif size == 'M':
+#     bill += 20
+#     if pepperoni == 'Y':
+#             bill += 3
+#     if extraChesse == "Y":
+#         bill += 1
+#         print(f"Your total is {bill}")
+#     else:
+#         print(f"Your total is {bill}")  
+# elif size == "L":
+#     bill += 25
+#     if pepperoni == 'Y':
+#             bill += 3
+#     if extraChesse == "Y":
+#         bill += 1
+#         print(f"Your total is {bill}")
+#     else:
+#         print(f"Your total is {bill}")  
+
+#Love Calc
+
+name1 = input("What is your name?\n")
+name2 = input("What is there name?\n")
+combined_string = name1 + name2
+
+lower_case_string = combined_string.lower()
+
+num1 = 0
+num2 = 0
+
+t = lower_case_string.count('t')
+r = lower_case_string.count('r')
+u = lower_case_string.count('u')
+e = lower_case_string.count('e')
+
+trueScore = t + r + u + e
+
+l = lower_case_string.count('l')
+o = lower_case_string.count('o')
+v = lower_case_string.count('v')
+e = lower_case_string.count('e')
+
+loveScore = l + o + v + e
+
+
+loveNumber = f"{trueScore}{loveScore}"
+
+if int(loveNumber) < 10 or int(loveNumber) > 90:
+    print(f"Your score is {loveNumber}, you go together like coke and mentos")
+elif  int(loveNumber) >= 40 and int(loveNumber) <= 50:
+    print(f"Your score is {loveNumber}, you are alright together")
+else:
+    print(f"You score is {loveNumber}")
