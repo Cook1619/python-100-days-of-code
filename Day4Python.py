@@ -32,24 +32,77 @@ import random
 # print(dirty_dozen)
 
 # 🚨 Don't change the code below 👇
-row1 = ["⬜️","⬜️","⬜️"]
-row2 = ["⬜️","⬜️","⬜️"]
-row3 = ["⬜️","⬜️","⬜️"]
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
-position = input("Where do you want to put the treasure? ")
-# 🚨 Don't change the code above 👆
+# row1 = ["⬜️","⬜️","⬜️"]
+# row2 = ["⬜️","⬜️","⬜️"]
+# row3 = ["⬜️","⬜️","⬜️"]
+# map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}")
+# position = input("Where do you want to put the treasure? ")
+# # 🚨 Don't change the code above 👆
 
-#Write your code below this row 👇
-horizonal = int(position[0])
-vertical = int(position[1])
-map[vertical - 1][horizonal -1] = 'X'
-
-
+# #Write your code below this row 👇
+# horizonal = int(position[0])
+# vertical = int(position[1])
+# map[vertical - 1][horizonal -1] = 'X'
 
 
 
-#Write your code above this row 👆
 
-# 🚨 Don't change the code below 👇
-print(f"{row1}\n{row2}\n{row3}")
+
+# #Write your code above this row 👆
+
+# # 🚨 Don't change the code below 👇
+# print(f"{row1}\n{row2}\n{row3}")
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+choices = [rock, paper, scissors]
+player_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+computer_choice = random.randint(0,2)
+
+
+print(choices[int(player_choice)])
+print("Computer chose:")
+print(choices[computer_choice])
+
+if player_choice == 0 and computer_choice == 1:
+    print("You lose")
+elif player_choice == 1 and computer_choice == 0:
+    print("You win")
+elif player_choice == 1 and computer_choice == 2:
+    print("You lose")
+elif player_choice == 2 and computer_choice == 1:
+    print("You win")
+elif player_choice == 2 and computer_choice == 0:
+    print("You lose")
+elif player_choice == 0 and computer_choice == 2:
+    print("You lose")
+
+
+
+
